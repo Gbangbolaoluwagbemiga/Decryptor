@@ -38,3 +38,4 @@
 - Add comments to Clarity contract (Build 36)
 - Refactor navbar logic (Build 37)
 - Update page metadata (Build 38)
+- Add unit tests for contract (Build 39)
