@@ -10,3 +10,4 @@
 - Update page metadata (Build 8)
 - Add unit tests for contract (Build 9)
 - Refactor campaign card component (Build 10)
+- Update styling for mobile responsiveness (Build 11)
