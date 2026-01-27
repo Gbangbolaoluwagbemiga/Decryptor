@@ -16,3 +16,4 @@
 - Update dependency versions (Build 14)
 - Fix typo in README (Build 15)
 - Add comments to Clarity contract (Build 16)
+- Refactor navbar logic (Build 17)
