@@ -47,3 +47,4 @@
 - Fix typo in README (Build 45)
 - Add comments to Clarity contract (Build 46)
 - Refactor navbar logic (Build 47)
+- Update page metadata (Build 48)
