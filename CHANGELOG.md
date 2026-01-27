@@ -42,3 +42,4 @@
 - Refactor campaign card component (Build 40)
 - Update styling for mobile responsiveness (Build 41)
 - Optimize smart contract gas usage (Build 42)
+- Add error handling for wallet connection (Build 43)
