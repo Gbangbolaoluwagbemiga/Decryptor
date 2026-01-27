@@ -20,3 +20,4 @@
 - Update page metadata (Build 18)
 - Add unit tests for contract (Build 19)
 - Refactor campaign card component (Build 20)
+- Update styling for mobile responsiveness (Build 21)
