@@ -55,3 +55,4 @@
 - Add error handling for wallet connection (Build 53)
 - Update dependency versions (Build 54)
 - Fix typo in README (Build 55)
+- Add comments to Clarity contract (Build 56)
