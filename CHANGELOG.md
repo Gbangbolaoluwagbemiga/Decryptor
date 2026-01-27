@@ -22,3 +22,4 @@
 - Refactor campaign card component (Build 20)
 - Update styling for mobile responsiveness (Build 21)
 - Optimize smart contract gas usage (Build 22)
+- Add error handling for wallet connection (Build 23)
