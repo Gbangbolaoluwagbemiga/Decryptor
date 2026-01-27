@@ -26,3 +26,4 @@
 - Update dependency versions (Build 24)
 - Fix typo in README (Build 25)
 - Add comments to Clarity contract (Build 26)
+- Refactor navbar logic (Build 27)
