@@ -40,7 +40,42 @@
 )
 
 ;; public functions
-;;
+(define-public (create-campaign (title (string-ascii 50)) (goal uint) (deadline uint))
+    (let
+        (
+            (campaign-id (var-get next-campaign-id))
+        )
+        (map-set campaigns campaign-id {
+            owner: tx-sender,
+            title: title,
+            goal: goal,
+            deadline: deadline,
+            pledged: u0,
+            claimed: false
+        })
+        (var-set next-campaign-id (+ campaign-id u1))
+        (ok campaign-id)
+    )
+)
+
+(define-public (pledge (campaign-id uint) (amount uint))
+    (let
+        (
+            (campaign (unwrap! (map-get? campaigns campaign-id) err-not-found))
+            (current-pledged (get pledged campaign))
+            (backer-pledge (default-to { amount: u0 } (map-get? pledges { campaign-id: campaign-id, backer: tx-sender })))
+        )
+        (asserts! (< block-height (get deadline campaign)) err-deadline-passed)
+        (try! (stx-transfer? amount tx-sender (as-contract tx-sender)))
+        (map-set pledges { campaign-id: campaign-id, backer: tx-sender }
+            { amount: (+ amount (get amount backer-pledge)) }
+        )
+        (map-set campaigns campaign-id
+            (merge campaign { pledged: (+ current-pledged amount) })
+        )
+        (ok true)
+    )
+)
 
 ;; read only functions
 ;;
