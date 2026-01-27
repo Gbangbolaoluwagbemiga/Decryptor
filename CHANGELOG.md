@@ -37,3 +37,4 @@
 - Fix typo in README (Build 35)
 - Add comments to Clarity contract (Build 36)
 - Refactor navbar logic (Build 37)
+- Update page metadata (Build 38)
