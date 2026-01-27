@@ -21,3 +21,4 @@
 - Add unit tests for contract (Build 19)
 - Refactor campaign card component (Build 20)
 - Update styling for mobile responsiveness (Build 21)
+- Optimize smart contract gas usage (Build 22)
