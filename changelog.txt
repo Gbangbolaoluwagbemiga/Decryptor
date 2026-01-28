@@ -5,3 +5,4 @@ Update 3: feat: Add cancellation mechanism for owners
 Update 4: feat: Integrate wallet connection hook
 Update 5: style: Format contract code
 Update 6: test: Add unit tests for refund flow
+Update 7: fix: Typos in README
