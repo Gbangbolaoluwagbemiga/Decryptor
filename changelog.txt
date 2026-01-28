@@ -24,3 +24,4 @@ Update 22: perf: Improve loading state handling
 Update 23: refactor: Optimize storage layout for campaigns
 Update 24: docs: Update function documentation
 Update 25: style: Update color palette
+Update 26: ui: Add category filter to home page
