@@ -3,3 +3,4 @@ Update 1: docs: Update function documentation
 Update 2: feat: Add progress bar animation
 Update 3: feat: Add cancellation mechanism for owners
 Update 4: feat: Integrate wallet connection hook
+Update 5: style: Format contract code
