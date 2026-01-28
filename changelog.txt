@@ -42,3 +42,4 @@ Update 40: docs: Update function documentation
 Update 41: feat: Integrate wallet connection hook
 Update 42: ui: Create campaign details page
 Update 43: test: Add unit tests for refund flow
+Update 44: feat: Implement campaign description support
