@@ -20,3 +20,4 @@ Update 18: ui: Create campaign details page
 Update 19: ui: Create campaign details page
 Update 20: style: Format contract code
 Update 21: feat: Add cancellation mechanism for owners
+Update 22: perf: Improve loading state handling
