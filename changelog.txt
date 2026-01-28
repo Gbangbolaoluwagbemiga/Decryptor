@@ -33,3 +33,4 @@ Update 31: ui: Add category filter to home page
 Update 32: fix: Mobile responsiveness for campaign card
 Update 33: refactor: Extract CampaignCard component
 Update 34: feat: Add cancellation mechanism for owners
+Update 35: fix: Typos in README
