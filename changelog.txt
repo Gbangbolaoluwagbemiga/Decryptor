@@ -1,2 +1,3 @@
 Update 0: fix: Mobile responsiveness for campaign card
 Update 1: docs: Update function documentation
+Update 2: feat: Add progress bar animation
