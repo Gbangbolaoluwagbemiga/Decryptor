@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { userSession } from "@/components/Navbar"
+import { userSession } from "@/lib/userSession"
 import { openContractCall } from "@stacks/connect"
 import { uintCV, stringAsciiCV } from "@stacks/transactions"
 

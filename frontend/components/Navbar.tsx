@@ -3,9 +3,7 @@
 import { AppConfig, UserSession, showConnect } from "@stacks/connect"
 import { useEffect, useState } from "react"
 import Link from "next/link"
-
-const appConfig = new AppConfig(["store_write", "publish_data"])
-export const userSession = new UserSession({ appConfig })
+import { userSession } from "@/lib/userSession"
 
 export default function Navbar() {
   const [userData, setUserData] = useState<any>(null)
