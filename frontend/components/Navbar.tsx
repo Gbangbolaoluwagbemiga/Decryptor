@@ -8,10 +8,10 @@ import { getUserSession } from "@/lib/userSession"
 export default function Navbar() {
   const [userData, setUserData] = useState<any>(null)
   const [mounted, setMounted] = useState(false)
-  const userSession = getUserSession()
 
   useEffect(() => {
     setMounted(true)
+    const userSession = getUserSession()
     if (userSession.isSignInPending()) {
       userSession.handlePendingSignIn().then((userData) => {
         setUserData(userData)
@@ -22,6 +22,7 @@ export default function Navbar() {
   }, [])
 
   const connectWallet = () => {
+    const userSession = getUserSession()
     showConnect({
       appDetails: {
         name: "ImpactStarter",
@@ -36,6 +37,7 @@ export default function Navbar() {
   }
 
   const disconnectWallet = () => {
+    const userSession = getUserSession()
     userSession.signUserOut("/")
     setUserData(null)
   }
