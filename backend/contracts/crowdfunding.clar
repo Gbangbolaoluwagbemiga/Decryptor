@@ -64,9 +64,10 @@
             (campaign (unwrap! (map-get? campaigns campaign-id) err-not-found))
             (current-pledged (get pledged campaign))
             (backer-pledge (default-to { amount: u0 } (map-get? pledges { campaign-id: campaign-id, backer: tx-sender })))
+            (contract-principal (as-contract tx-sender))
         )
         (asserts! (< block-height (get deadline campaign)) err-deadline-passed)
-        (try! (stx-transfer? amount tx-sender (as-contract tx-sender)))
+        (try! (stx-transfer? amount tx-sender contract-principal))
         (map-set pledges { campaign-id: campaign-id, backer: tx-sender }
             { amount: (+ amount (get amount backer-pledge)) }
         )

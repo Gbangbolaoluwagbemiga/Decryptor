@@ -7,9 +7,13 @@ import { uintCV, stringAsciiCV } from "@stacks/transactions"
 
 export default function CreateCampaign() {
   const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
+  const [category, setCategory] = useState("Tech")
   const [goal, setGoal] = useState("")
   const [deadline, setDeadline] = useState("")
   
+  const categories = ["Tech", "Art", "Community", "Environment", "Other"]
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
@@ -19,11 +23,13 @@ export default function CreateCampaign() {
     }
 
     const options = {
-      contractAddress: "SP2QNSNKR3NRDWNTX0Q7R4T8WGBJ8RE8RA516AKZP", // Mainnet deployment
-      contractName: "crowdfunding",
+      contractAddress: "SP2QNSNKR3NRDWNTX0Q7R4T8WGBJ8RE8RA516AKZP",
+      contractName: "crowdfunding-v2",
       functionName: "create-campaign",
       functionArgs: [
         stringAsciiCV(title),
+        stringAsciiCV(description),
+        stringAsciiCV(category),
         uintCV(parseInt(goal)),
         uintCV(parseInt(deadline))
       ],
@@ -52,7 +58,31 @@ export default function CreateCampaign() {
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full border rounded-md p-2"
                 required
+                maxLength={50}
             />
+        </div>
+        <div>
+            <label className="block text-sm font-medium mb-1">Description</label>
+            <textarea 
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="w-full border rounded-md p-2"
+                required
+                maxLength={256}
+                rows={3}
+            />
+        </div>
+        <div>
+            <label className="block text-sm font-medium mb-1">Category</label>
+            <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="w-full border rounded-md p-2"
+            >
+                {categories.map(c => (
+                    <option key={c} value={c}>{c}</option>
+                ))}
+            </select>
         </div>
         <div>
             <label className="block text-sm font-medium mb-1">Goal (STX)</label>
